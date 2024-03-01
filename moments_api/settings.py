@@ -62,8 +62,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', 'moments-api-julia.herokuapp.com',
-                 'https://moments-api-julia-d24159f667ec.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'moments-api-julia.herokuapp.com',
+                 'moments-api-julia-d24159f667ec.herokuapp.com']
 
 
 # Application definition
