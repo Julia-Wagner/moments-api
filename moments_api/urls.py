@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import root_route, logout_route
+from .views import root_route, logout_route, CustomUserDetailsView
 
 urlpatterns = [
     path('', root_route),
@@ -32,4 +32,6 @@ urlpatterns = [
     path('', include('comments.urls')),
     path('', include('likes.urls')),
     path('', include('followers.urls')),
+    path('dj-rest-auth/user/', CustomUserDetailsView.as_view(),
+         name='custom_user_details'),
 ]
