@@ -4,12 +4,6 @@ from .settings import (
     JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE,
     JWT_AUTH_SAMESITE, JWT_AUTH_SECURE
 )
-from .serializers import CurrentUserSerializer
-from dj_rest_auth.views import UserDetailsView
-
-
-class CustomUserDetailsView(UserDetailsView):
-    serializer_class = CurrentUserSerializer
 
 
 @api_view()
